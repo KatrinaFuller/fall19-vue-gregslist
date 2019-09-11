@@ -85,6 +85,25 @@ export default new Vuex.Store({
         console.error(error)
 
       }
+    },
+    async addHouse({ dispatch }, payload) {
+      try {
+        let res = await api.post('/houses', payload)
+        dispatch('getHouses')
+      } catch (error) {
+        console.error(error)
+
+      }
+    },
+    async removeHouse({ dispatch }, payload) {
+      try {
+        let res = await api.delete('/houses/' + payload)
+        dispatch('getHouses')
+        //NOTE this is coming from the import statement at the top
+        router.push({ name: 'houses' })
+      } catch (error) {
+        console.error(error)
+      }
     }
 
   }

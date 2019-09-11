@@ -8,6 +8,7 @@
     <h5>Description: {{house.description}}</h5>
     <h5>Levels: {{house.levels}}</h5>
     <h5>Year: {{house.year}}</h5>
+    <button class="btn btn-danger" @click="remove">Remove</button>
   </div>
 </template>
 
@@ -29,11 +30,18 @@ export default {
       return this.$store.state.activeHouse;
     }
   },
-  methods: {},
+  methods: {
+    remove() {
+      this.$store.dispatch("deleteHouse", this.house._id);
+    }
+  },
   components: {}
 };
 </script>
 
 
 <style scoped>
+img {
+  height: 300px;
+}
 </style>

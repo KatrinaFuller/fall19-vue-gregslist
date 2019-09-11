@@ -48,7 +48,7 @@
                 class="form-control"
                 id="imgurl"
                 placeholder="Enter imgurl"
-                v-model="newCar.imgUrl"
+                v-model="newHouse.imgUrl"
               />
             </div>
             <div class="form-group">
@@ -58,7 +58,7 @@
                 class="form-control"
                 id="description"
                 placeholder="Enter description"
-                v-model="newCar.description"
+                v-model="newHouse.description"
               />
             </div>
             <div class="form-group">
