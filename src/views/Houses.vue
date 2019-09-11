@@ -4,6 +4,11 @@
       <house v-for="house in houses" :houseProp="house" :key="house._id" />
       <div class="col-12">
         <CreateHouseModal />
+        <button
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#create-house-modal"
+        >List House</button>
       </div>
     </div>
   </div>
@@ -12,6 +17,7 @@
 
 <script>
 import House from "../components/House";
+import CreateHouseModal from "../components/CreateHouseModal";
 
 export default {
   name: "houses",
@@ -28,7 +34,7 @@ export default {
     }
   },
   methods: {},
-  components: { House }
+  components: { House, CreateHouseModal }
 };
 </script>
 
