@@ -2,7 +2,9 @@
   <div class="houses container-fluid">
     <div class="row">
       <house v-for="house in houses" :houseProp="house" :key="house._id" />
-      <div class="col"></div>
+      <div class="col-12">
+        <CreateHouseModal />
+      </div>
     </div>
   </div>
 </template>

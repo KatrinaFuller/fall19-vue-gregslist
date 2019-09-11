@@ -1,9 +1,8 @@
 <template>
-  <div class="house col-3" @click="viewHouse()">
-    <h5>{{houseProp.bedrooms}}</h5>
-    <h5>{{houseProp.bathrooms}}</h5>
-    <h5>{{houseProp.imgUrl}}</h5>
-    <h5>{{houseProp.price}}</h5>
+  <div class="house col-3 border rounded" @click="viewHouse()">
+    <h5>Bedrooms: {{houseProp.bedrooms}}</h5>
+    <h5>Bathrooms: {{houseProp.bathrooms}}</h5>
+    <h5>Price: {{houseProp.price}}</h5>
   </div>
 </template>
 
