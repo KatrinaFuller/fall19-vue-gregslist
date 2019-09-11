@@ -1,5 +1,10 @@
 <template>
-  <div class="house"></div>
+  <div class="house col-3" @click="viewHouse()">
+    <h5>{{houseProp.bedrooms}}</h5>
+    <h5>{{houseProp.bathrooms}}</h5>
+    <h5>{{houseProp.imgUrl}}</h5>
+    <h5>{{houseProp.price}}</h5>
+  </div>
 </template>
 
 
@@ -11,7 +16,14 @@ export default {
     return {};
   },
   computed: {},
-  methods: {},
+  methods: {
+    viewHouse() {
+      this.$router.push({
+        name: "house",
+        params: { houseId: this.houseProp._id }
+      });
+    }
+  },
   components: {}
 };
 </script>
