@@ -1,24 +1,23 @@
 <template>
-  <div class="houses">
-
-
-  </div>
+  <div class="houses"></div>
 </template>
 
 
 <script>
 export default {
-  name: 'houses',
-  data(){
-    return {}
+  name: "houses",
+  data() {
+    return {};
   },
-  computed:{},
-  methods:{},
-  components:{}
-}
+  mounted() {
+    this.$store.dispatch("getHouses");
+  },
+  computed: {},
+  methods: {},
+  components: {}
+};
 </script>
 
 
 <style scoped>
-
 </style>
