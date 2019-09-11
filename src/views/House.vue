@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     remove() {
-      this.$store.dispatch("deleteHouse", this.house._id);
+      this.$store.dispatch("removeHouse", this.house._id);
     }
   },
   components: {}
