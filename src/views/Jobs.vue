@@ -1,9 +1,16 @@
 <template>
-  <div class="jobs container-fluid"></div>
+  <div class="jobs container-fluid">
+    <div class="row">
+      <job v-for="job in jobs" :jobProp="job" :key="job._id" />
+      <div class="col"></div>
+    </div>
+  </div>
 </template>
 
 
 <script>
+import Job from "../components/Job";
+
 export default {
   name: "jobs",
   data() {
@@ -12,9 +19,13 @@ export default {
   mounted() {
     this.$store.dispatch("getJobs");
   },
-  computed: {},
+  computed: {
+    jobs() {
+      return this.$store.state.jobs; //getting jobs from data
+    }
+  },
   methods: {},
-  components: {}
+  components: { Job }
 };
 </script>
 
