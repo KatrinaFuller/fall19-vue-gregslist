@@ -1,5 +1,8 @@
 <template>
-  <div class="car"></div>
+  <div class="car col-3 border rounded" @click="viewJob()">
+    <h5>Company: {{jobProp.company}}</h5>
+    <h5>Title: {{jobProp.jobTitle}}</h5>
+  </div>
 </template>
 
 
