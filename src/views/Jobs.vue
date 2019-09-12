@@ -2,7 +2,10 @@
   <div class="jobs container-fluid">
     <div class="row">
       <job v-for="job in jobs" :jobProp="job" :key="job._id" />
-      <div class="col"></div>
+      <div class="col-12 pt-5">
+        <CreateJobModal />
+        <button class="btn btn-primary" data-toggle="modal" data-target="#create-job-modal">List Job</button>
+      </div>
     </div>
   </div>
 </template>
