@@ -14,7 +14,8 @@ export default new Vuex.Store({
     cars: [],
     activeCar: {},
     houses: [],
-    activeHouse: {}
+    activeHouse: {},
+    jobs: []
   },
   mutations: {
     setCars(state, payload) {
@@ -28,6 +29,9 @@ export default new Vuex.Store({
     },
     setActiveHouse(state, payload) {
       state.activeHouse = payload
+    },
+    setJobs(state, payload) {
+      state.jobs = payload
     }
   },
   actions: {
@@ -101,6 +105,14 @@ export default new Vuex.Store({
         dispatch('getHouses')
         //NOTE this is coming from the import statement at the top
         router.push({ name: 'houses' })
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    async getJobs({ commit, dispatch }) {
+      try {
+        let res = await api.get('jobs')
+        commit('setJobs', res.data.data)
       } catch (error) {
         console.error(error)
       }
