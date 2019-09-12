@@ -130,6 +130,25 @@ export default new Vuex.Store({
         console.error(error)
 
       }
+    },
+    async addJob({ dispatch }, payload) {
+      try {
+        let res = await api.post('/jobs', payload)
+        dispatch('getJobs')
+      } catch (error) {
+        console.error(error)
+
+      }
+    },
+    async removeJob({ dispatch }, payload) {
+      try {
+        let res = await api.delete('/jobs/' + payload)
+        dispatch('getJobs')
+        //NOTE this is coming from the import statement at the top
+        router.push({ name: 'jobs' })
+      } catch (error) {
+        console.error(error)
+      }
     }
 
   }

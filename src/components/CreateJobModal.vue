@@ -60,7 +60,7 @@
                 v-model="newJob.description"
               />
             </div>
-            <button type="submit" class="btn btn-primary">List Car</button>
+            <button type="submit" class="btn btn-primary">List Job</button>
           </form>
         </div>
         <div class="modal-footer">

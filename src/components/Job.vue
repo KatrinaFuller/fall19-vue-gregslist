@@ -1,5 +1,5 @@
 <template>
-  <div class="car col-3 border rounded" @click="viewJob()">
+  <div class="job col-3 border rounded" @click="viewJob()">
     <h5>Company: {{jobProp.company}}</h5>
     <h5>Title: {{jobProp.jobTitle}}</h5>
   </div>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "car",
+  name: "job",
   props: ["jobProp"],
   data() {
     return {};

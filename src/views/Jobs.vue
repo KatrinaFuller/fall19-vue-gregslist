@@ -13,6 +13,7 @@
 
 <script>
 import Job from "../components/Job";
+import CreateJobModal from "../components/CreateJobModal";
 
 export default {
   name: "jobs",
@@ -28,7 +29,7 @@ export default {
     }
   },
   methods: {},
-  components: { Job }
+  components: { Job, CreateJobModal }
 };
 </script>
 

@@ -13,6 +13,7 @@
 <script>
 import Car from "../components/Car";
 import CreateCarModal from "../components/CreateCarModal";
+
 export default {
   name: "cars",
   data() {
