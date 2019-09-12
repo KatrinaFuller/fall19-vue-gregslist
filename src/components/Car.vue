@@ -1,5 +1,6 @@
 <template>
   <div class="car col-3 border rounded" @click="viewCar()">
+    <img :src="carProp.imgUrl" alt />
     <h5>{{carProp.make}}</h5>
     <h5>{{carProp.model}}</h5>
     <h5>{{carProp.year}}</h5>
@@ -30,4 +31,7 @@ export default {
 
 
 <style scoped>
+img {
+  height: 150px;
+}
 </style>
